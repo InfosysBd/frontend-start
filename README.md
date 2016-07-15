@@ -20,6 +20,8 @@ Other Dependencies:
 $ npm install gulp-ruby-sass@1.0.0 gulp-autoprefixer gulp-minify-css gulp-rename glob dargs slash mkdirp rimraf win-spawn gulp-util object-assign convert-source-map each-async vinyl --save-dev
 
 
+********* Need to add Jade or any other template Engine ******
+
 Set Up LiveReload:
 $	npm install tiny-lr connect-livereload --save-dev
 
