@@ -1,0 +1,37 @@
+/* Font for georgia */
+
+@font-face {
+  font-family: 'georgiaregular';
+  src: url('../fonts/georgia/georgia-webfont.eot');
+  src: url('../fonts/georgia/georgia-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/georgia/georgia-webfont.woff') format('woff'),
+       url('../fonts/georgia/georgia-webfont.ttf') format('truetype'),
+       url('../fonts/georgia/georgia-webfont.svg#georgiaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'georgiaItalic';
+  src: url('../fonts/georgiaIta/289581299-georgiai.eot');
+  src: url('../fonts/georgiaIta/289581299-georgiai.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/georgiaIta/289581299-georgiai.woff') format('woff'),
+       url('../fonts/georgiaIta/289581299-georgiai.ttf') format('truetype'),
+       url('../fonts/georgiaIta/289581299-georgiai.svg#georgiaItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Archer Font */
+
+@font-face {
+    font-family: 'ArcherBold';
+    src: url('../fonts/Archer-Bold/Archer-Bold.eot');
+    src: url('../fonts/Archer-Bold/Archer-Bold.eot') format('embedded-opentype'),
+         url('../fonts/Archer-Bold/Archer-Bold.woff') format('woff'),
+         url('../fonts/Archer-Bold/Archer-Bold.ttf') format('truetype'),
+         url('../fonts/Archer-Bold/Archer-Bold.svg#ArcherBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

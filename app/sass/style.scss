@@ -1,0 +1,19 @@
+@import 'compass';
+@import "spr/*.png";
+
+@import "partials/variables";           // Add Custom variables
+@import "partials/mixins";              // Add custom mixins
+@import "partials/typography";          // Add Fonts for Cradle Site
+
+body{
+	background: pink;
+	@include ArcherBold();
+}
+
+
+.mita {
+	@include spr-sprite(tick-green);
+	width: 100%;
+	height: 35px;
+
+}
