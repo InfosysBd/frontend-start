@@ -1,5 +1,5 @@
 /////////////////////////////////////
-// Required 
+// Required
 /////////////////////////////////////
 
 var gulp = require('gulp'),
@@ -11,6 +11,7 @@ var gulp = require('gulp'),
         concat = require('gulp-concat');
         uglify = require('gulp-uglify');
         imagemin = require('gulp-imagemin');
+        jade = require('gulp-jade');
 
 gulp.task('express', function() {
   var express = require('express');
@@ -62,6 +63,15 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('dist/js/'))
 });
 
+gulp.task('jade', function() {
+    return gulp.src('templates/*.jade')
+        .pipe(jade({
+          pretty: true
+        })) // pip to jade plugin
+        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('dist/')); // tell gulp our output folder
+});
+
 gulp.task('images', function(){
   return gulp.src('images/**/*.+(png|jpg|gif|svg)')
   .pipe(imagemin())
@@ -81,11 +91,12 @@ gulp.task('htmls', function() {
 gulp.task('watch', function() {
   gulp.watch('sass/*.scss', ['styles']);
   gulp.watch('*.html', notifyLiveReload);
+  gulp.watch('*.jade', notifyLiveReload);
   gulp.watch('css/*.css', notifyLiveReload);
   gulp.watch('js/*.js', notifyLiveReload);
   gulp.watch('scripts/*.js', ['scripts']);
 });
 
-gulp.task('default', ['styles', 'scripts', 'images' , 'express', 'livereload', 'watch', 'fonts', 'htmls'], function() {
+gulp.task('default', ['styles', 'scripts', 'jade', 'images' , 'express', 'livereload', 'watch', 'fonts', 'htmls'], function() {
 
 });

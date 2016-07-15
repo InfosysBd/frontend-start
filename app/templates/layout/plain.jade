@@ -1,0 +1,29 @@
+//- Setting Few default Variables
+block global_variables
+  -var title= "Home", desc= "Description", bodyClass="page"
+//- Avaiable Variables
+//-
+//-     main_content    // Pass Main HTML contents
+//-     title           // Title of the page will be
+//-     meta_tags       // Pass Meta tags
+//-     styles          // To load additional Stylesheets
+//-     head_script     // Load javascript files in head section
+//-     footer_script   // Load javascript files in footer section
+//-
+doctype html
+html(lang="en")
+  include ../partials/head
+
+  body(class='#{bodyClass}')
+
+    div.container-wrapper
+      header.header
+        block header
+
+      section.content
+        block main_content
+
+      footer.footer
+        block footer
+
+    include ../partials/footer

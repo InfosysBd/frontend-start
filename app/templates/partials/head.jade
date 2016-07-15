@@ -1,0 +1,18 @@
+head
+  title Base Framework | #{title}
+  meta(name='description', content= desc )
+  meta(charset="utf-8")
+  <!-- Viewport -->
+  meta(name="viewport", content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0 user-scalable=no")
+  meta(name="apple-mobile-web-app-capable", content="yes")
+  // This is the block for metatags
+  block meta_tags
+
+  <!-- Including Main Framework and Verizon css files -->
+  link(rel='icon', href='./favicon.ico', type='image/x-icon')
+  link(rel='stylesheet', href='css/style.min.css')
+  /// Block for styles
+  block styles
+
+  <!-- Including browser feature detection plugin -->
+  block head_script
