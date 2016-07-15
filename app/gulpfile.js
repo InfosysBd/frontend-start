@@ -8,6 +8,9 @@ var gulp = require('gulp'),
         minifycss = require('gulp-minify-css'),
         rename = require('gulp-rename');
         compass = require('gulp-compass');
+        concat = require('gulp-concat');
+        uglify = require('gulp-uglify');
+        imagemin = require('gulp-imagemin');
 
 gulp.task('express', function() {
   var express = require('express');
@@ -49,12 +52,27 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('css'));
 });
 
+gulp.task('scripts', function() {
+  gulp.src(['scripts/*.js'])
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js/'))
+});
+
+gulp.task('images', function(){
+  return gulp.src('raw_images/**/*.+(png|jpg|gif|svg)')
+  .pipe(imagemin())
+  .pipe(gulp.dest('images'))
+});
+
 gulp.task('watch', function() {
   gulp.watch('sass/*.scss', ['styles']);
   gulp.watch('*.html', notifyLiveReload);
   gulp.watch('css/*.css', notifyLiveReload);
+  gulp.watch('js/*.js', notifyLiveReload);
+  gulp.watch('scripts/*.js', ['scripts']);
 });
 
-gulp.task('default', ['styles', 'express', 'livereload', 'watch'], function() {
+gulp.task('default', ['styles', 'scripts', 'images' , 'express', 'livereload', 'watch'], function() {
 
 });

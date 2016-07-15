@@ -2,11 +2,12 @@
 @import "spr/*.png";
 
 @import "partials/variables";           // Add Custom variables
-@import "partials/mixins";              // Add custom mixins
 @import "partials/typography";          // Add Fonts for Cradle Site
+@import "partials/mixins";              // Add custom mixins
+@import "partials/ooscss";            //	Some Object Oriented classes
 
 body{
-	background: pink;
+	background: silver;
 	@include ArcherBold();
 }
 

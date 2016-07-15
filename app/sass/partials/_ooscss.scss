@@ -1,0 +1,20 @@
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.nopadding-left {
+   padding-left: 0 !important;
+   margin-left: 0 !important;
+}
+
+.nopadding-right {
+   padding-right: 0 !important;
+   margin-right: 0 !important;
+}
+.clearboth{
+	clear: both;
+}
+
+.focus-shadow{
+  @include single-box-shadow(0, 0, 10px, 1px, $silver, inset);
+}

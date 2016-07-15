@@ -1,4 +1,53 @@
+/*********************
+SIZING SHORTCUTS
+*********************/
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
 
+// provide font and line height
+// As Using body font size 62.5%
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue) + px;
+  font-size: ($sizeValue/10) + rem;
+}
+@mixin line-height($sizeValue: 1) {
+  line-height: ($sizeValue) + px;
+  line-height: ($sizeValue/10) + rem;
+}
+// Clearfix
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+// Box Sizing
+$box-model: border-box !default;
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+// Center-align a block level element
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin before-icon($url, $height: 21, $width: 21 ) {
+  content: "";
+  background: url($url);
+  display: inline-block;
+  height: $height;
+  width: $width;
+}
 
 
 //////////////////////////////////
